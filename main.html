@@ -54,6 +54,12 @@
         
         h3 {
             color: var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+        
+        h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
         }
         
         .topic-card {
@@ -77,6 +83,7 @@
             white-space: pre-wrap;
             margin: 1rem 0;
             border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            overflow-x: auto;
         }
         
         .prisma-flowchart {
@@ -117,6 +124,10 @@
             .container {
                 width: 95%;
             }
+            
+            .search-strategy {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -136,7 +147,11 @@
         
         <!-- Topic 1 -->
         <div class="topic-card" id="topic1">
-            <h3>1. Impact of Sleep Disruption on Alzheimer's Risk</h3>
+            <h3>1. The Impact of Sleep Disruption on Alzheimer's Disease Risk</h3>
+            <p><strong>Population:</strong> Adults (≥50 years) without dementia at baseline<br>
+            <strong>Intervention/Exposure:</strong> Chronic sleep disruption (insomnia, short/long sleep duration, poor sleep quality)<br>
+            <strong>Comparison:</strong> Normal sleep patterns<br>
+            <strong>Outcome:</strong> Incidence of Alzheimer's disease (measured via clinical diagnosis/biomarkers)</p>
             
             <h4>Search Strategy (PubMed):</h4>
             <div class="search-strategy">
@@ -164,7 +179,11 @@ AND
         
         <!-- Topic 2 -->
         <div class="topic-card" id="topic2">
-            <h3>2. Sleep-Disordered Breathing (SDB) and AD Pathology</h3>
+            <h3>2. Sleep-Disordered Breathing (SDB) and Alzheimer's Pathology</h3>
+            <p><strong>Population:</strong> Adults with SDB (e.g., OSA) vs. controls<br>
+            <strong>Intervention/Exposure:</strong> Presence of SDB (polysomnography-diagnosed)<br>
+            <strong>Comparison:</strong> No SDB<br>
+            <strong>Outcome:</strong> Amyloid-beta/tau PET, CSF biomarkers, or MRI brain atrophy</p>
             
             <h4>Search Strategy (Embase):</h4>
             <div class="search-strategy">
@@ -190,100 +209,320 @@ AND
             </div>
         </div>
         
-        <!-- Continue with Topics 3-10 following the same pattern -->
         <!-- Topic 3 -->
         <div class="topic-card" id="topic3">
-            <h3>3. Melatonin for Sleep in AD</h3>
-            <!-- Content would follow same structure -->
+            <h3>3. Melatonin Supplementation for Sleep in Alzheimer's Patients</h3>
+            <p><strong>Population:</strong> AD patients with sleep disturbances<br>
+            <strong>Intervention:</strong> Melatonin (any dose/formulation)<br>
+            <strong>Comparison:</strong> Placebo or no treatment<br>
+            <strong>Outcome:</strong> Sleep quality (actigraphy/PSG), circadian rhythm improvement, cognitive decline</p>
+            
+            <h4>Search Strategy (PubMed):</h4>
+            <div class="search-strategy">
+("Alzheimer Disease"[Mesh] OR "Dementia"[Mesh])
+AND
+("Melatonin"[Mesh] OR "melatonin"[tiab] OR "circadian intervention*"[tiab])
+AND
+("Sleep"[Mesh] OR "sleep quality"[tiab] OR "actigraphy"[tiab] OR "polysomnography"[tiab])
+            </div>
+            
+            <h4>PRISMA Flowchart:</h4>
+            <div class="prisma-flowchart">
+                <ol>
+                    <li><strong>Records identified:</strong> X (PubMed) + Y (Cochrane) + Z (other) = Total (N)</li>
+                    <li><strong>After duplicates removed:</strong> N1</li>
+                    <li><strong>Screened titles/abstracts:</strong> N2 excluded, N3 eligible</li>
+                    <li><strong>Full-text assessed:</strong> N4 excluded (reasons), N5 included</li>
+                </ol>
+            </div>
+            
+            <div class="filters">
+                <strong>Key Filters:</strong> RCTs only, human studies, no date restriction
+            </div>
         </div>
         
         <!-- Topic 4 -->
         <div class="topic-card" id="topic4">
-            <h3>4. Glymphatic System and Amyloid Clearance</h3>
-            <!-- Content would follow same structure -->
+            <h3>4. Glymphatic System and Sleep-Dependent Amyloid Clearance</h3>
+            <p><strong>Population:</strong> Humans/animal models with AD pathology<br>
+            <strong>Intervention:</strong> Sleep deprivation vs. normal sleep/SWS enhancement<br>
+            <strong>Comparison:</strong> Baseline glymphatic function<br>
+            <strong>Outcome:</strong> Amyloid-beta clearance rates (imaging/CSF)</p>
+            
+            <h4>Search Strategy (PubMed/Embase):</h4>
+            <div class="search-strategy">
+("Glymphatic System"[Mesh] OR "glymphatic"[tiab] OR "sleep clearance"[tiab])
+AND
+("Alzheimer Disease"[Mesh] OR "amyloid beta"[Mesh] OR "tau proteins"[Mesh])
+AND
+("Sleep"[Mesh] OR "slow wave sleep"[tiab] OR "deep sleep"[tiab])
+            </div>
+            
+            <h4>PRISMA Flowchart:</h4>
+            <div class="prisma-flowchart">
+                <ol>
+                    <li><strong>Records identified:</strong> X (PubMed) + Y (Embase) + Z (other) = Total (N)</li>
+                    <li><strong>After duplicates removed:</strong> N1</li>
+                    <li><strong>Screened titles/abstracts:</strong> N2 excluded, N3 eligible</li>
+                    <li><strong>Full-text assessed:</strong> N4 excluded (reasons), N5 included</li>
+                </ol>
+            </div>
+            
+            <div class="filters">
+                <strong>Key Filters:</strong> Include animal and human studies, years 2010-2024 (glymphatics is newer field)
+            </div>
         </div>
         
         <!-- Topic 5 -->
         <div class="topic-card" id="topic5">
-            <h3>5. RBD as a Predictor of AD</h3>
-            <!-- Content would follow same structure -->
+            <h3>5. REM Sleep Behavior Disorder (RBD) as a Predictor of AD</h3>
+            <p><strong>Population:</strong> Idiopathic RBD patients<br>
+            <strong>Intervention/Exposure:</strong> Presence of RBD (polysomnography-confirmed)<br>
+            <strong>Comparison:</strong> Non-RBD controls<br>
+            <strong>Outcome:</strong> Conversion rate to AD/dementia over time</p>
+            
+            <h4>Search Strategy (Embase):</h4>
+            <div class="search-strategy">
+('REM sleep behavior disorder'/exp OR 'RBD':ti,ab)
+AND
+('Alzheimer disease'/exp OR 'dementia'/exp OR 'neurodegenerative disease'/exp)
+AND
+('disease progression'/exp OR 'predict*':ti,ab OR 'conversion':ti,ab)
+            </div>
+            
+            <h4>PRISMA Flowchart:</h4>
+            <div class="prisma-flowchart">
+                <ol>
+                    <li><strong>Records identified:</strong> X (Embase) + Y (PubMed) + Z (other) = Total (N)</li>
+                    <li><strong>After duplicates removed:</strong> N1</li>
+                    <li><strong>Screened titles/abstracts:</strong> N2 excluded, N3 eligible</li>
+                    <li><strong>Full-text assessed:</strong> N4 excluded (reasons), N5 included</li>
+                </ol>
+            </div>
+            
+            <div class="filters">
+                <strong>Key Filters:</strong> Longitudinal studies ≥5 years follow-up, human only
+            </div>
         </div>
         
         <!-- Topic 6 -->
         <div class="topic-card" id="topic6">
-            <h3>6. Circadian Interventions for AD Sleep Disorders</h3>
-            <!-- Content would follow same structure -->
+            <h3>6. Circadian Interventions for AD-Related Sleep Disorders</h3>
+            <p><strong>Population:</strong> AD patients with circadian dysfunction<br>
+            <strong>Intervention:</strong> Bright light therapy, timed exercise, or social cues<br>
+            <strong>Comparison:</strong> Standard care/no intervention<br>
+            <strong>Outcome:</strong> Sleep consolidation, reduced sundowning, cognitive stability</p>
+            
+            <h4>Search Strategy (PubMed):</h4>
+            <div class="search-strategy">
+("Alzheimer Disease"[Mesh] OR "Dementia"[Mesh])
+AND
+("Light Therapy"[Mesh] OR "bright light"[tiab] OR "exercise timing"[tiab])
+AND
+("Circadian Rhythm"[Mesh] OR "sleep wake disorder*"[tiab])
+            </div>
+            
+            <h4>PRISMA Flowchart:</h4>
+            <div class="prisma-flowchart">
+                <ol>
+                    <li><strong>Records identified:</strong> X (PubMed) + Y (CINAHL) + Z (other) = Total (N)</li>
+                    <li><strong>After duplicates removed:</strong> N1</li>
+                    <li><strong>Screened titles/abstracts:</strong> N2 excluded, N3 eligible</li>
+                    <li><strong>Full-text assessed:</strong> N4 excluded (reasons), N5 included</li>
+                </ol>
+            </div>
+            
+            <div class="filters">
+                <strong>Key Filters:</strong> Clinical trials only, years 1990-2024 (light therapy has long history)
+            </div>
         </div>
         
         <!-- Topic 7 -->
         <div class="topic-card" id="topic7">
-            <h3>7. Bidirectional Sleep-AD Biomarkers Link</h3>
-            <!-- Content would follow same structure -->
-        </div>
-        
-        <!-- Topic 8 -->
-        <div class="topic-card" id="topic8">
-            <h3>8. Pharmacological Treatments for Sleep in AD</h3>
-            <!-- Content would follow same structure -->
-        </div>
-        
-        <!-- Topic 9 -->
-        <div class="topic-card" id="topic9">
-            <h3>9. Sleep and MCI-to-AD Progression</h3>
-            <!-- Content would follow same structure -->
-        </div>
-        
-        <!-- Topic 10 -->
-        <div class="topic-card" id="topic10">
-            <h3>10. Gut Microbiome-Sleep-AD Triad</h3>
-            <!-- Content would follow same structure -->
-        </div>
-        
-        <section id="general-tips">
-            <h2>General PRISMA Template</h2>
-            <div class="prisma-flowchart">
-                <ol>
-                    <li><strong>Records identified:</strong>
-                        <ul>
-                            <li>PubMed: X</li>
-                            <li>Embase: Y</li>
-                            <li>Other (Cochrane, Scopus): Z</li>
-                            <li>→ Total: N</li>
-                        </ul>
-                    </li>
-                    <li><strong>Duplicates removed:</strong> N1</li>
-                    <li><strong>Titles/abstracts screened:</strong> N2 excluded, N3 eligible</li>
-                    <li><strong>Full-text assessed:</strong>
-                        <ul>
-                            <li>Excluded (reasons): N4
-                                <ul>
-                                    <li>Not AD population: A</li>
-                                    <li>No sleep measures: B</li>
-                                    <li>Review/commentary: C</li>
-                                </ul>
-                            </li>
-                            <li>Included in review: N5</li>
-                        </ul>
-                    </li>
-                </ol>
+            <h3>7. Bidirectional Sleep Deprivation-Alzheimer's Biomarkers Link</h3>
+            <p><strong>Population:</strong> Humans/animal models<br>
+            <strong>Intervention/Exposure:</strong> Experimental sleep deprivation or chronic poor sleep<br>
+            <strong>Comparison:</strong> Normal sleep controls<br>
+            <strong>Outcome:</strong> Changes in amyloid-beta/tau (CSF, PET, blood)</p>
+            
+            <h4>Search Strategy (Embase):</h4>
+            <div class="search-strategy">
+('sleep deprivation'/exp OR 'sleep disruption':ti,ab)
+AND
+('Alzheimer disease'/exp OR 'amyloid beta'/exp OR 'tau protein'/exp)
+AND
+('biomarker*':ti,ab OR 'cerebrospinal fluid':ti,ab OR 'PET':ti,ab)
             </div>
             
-            <h3>Key Tips for Your Systematic Review</h3>
-            <ul>
-                <li>Use <strong>EndNote or Zotero</strong> for deduplication</li>
-                <li><strong>Pilot-test</strong> your search on 1 database first</li>
-                <li>Register your protocol on <strong>PROSPERO</strong> (for health-related reviews)</li>
-                <li>Consider using <strong>Rayyan</strong> for collaborative screening</li>
-                <li>Document all search dates and database versions</li>
-            </ul>
+            <h4>PRISMA Flowchart:</h4>
+            <div class="prisma-flowchart">
+                <ol>
+                    <li><strong>Records identified:</strong></li>        <!-- Additional Resources Section -->
+        <section id="additional-resources">
+            <h2>Additional Resources</h2>
+            
+            <div class="topic-card">
+                <h3>PRISMA 2020 Checklist</h3>
+                <p>Essential items to include when reporting your systematic review:</p>
+                <ul>
+                    <li><strong>Title:</strong> Identify the report as a systematic review</li>
+                    <li><strong>Abstract:</strong> Structured summary including objectives, data sources, etc.</li>
+                    <li><strong>Methods:</strong> Protocol and registration, eligibility criteria, information sources</li>
+                    <li><strong>Results:</strong> Study selection, characteristics, risk of bias, synthesis</li>
+                    <li><strong>Discussion:</strong> Summary of evidence, limitations, conclusions</li>
+                </ul>
+                <p><a href="http://www.prisma-statement.org/" target="_blank">View full PRISMA checklist</a></p>
+            </div>
+            
+            <div class="topic-card">
+                <h3>Recommended Tools</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+                    <div>
+                        <h4>Search & Screening</h4>
+                        <ul>
+                            <li><a href="https://rayyan.ai/users/sign_in" target="Rayyan">Rayyan (screening)</a></li>
+                            <li><a href="https://app.covidence.org/signup/trial/new">Covidence (systematic review management)</a></li>
+                            <li>Zotero (reference management)</li>
+                            <li>EndNote</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Analysis</h4>
+                        <ul>
+                            <li><a href="https://libguides.bham.ac.uk/c.php?g=712269">RevMan (Cochrane reviews)</a></li>
+                            <li>STATA/R (meta-analysis)</li>
+                            <li>SPSS</li>
+                            <li>GRADEpro (evidence grading)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Reporting</h4>
+                        <ul>
+                            <li>PRISMA Flow Diagram Generator</li>
+                            <li>Lucidchart (diagrams)</li>
+                            <li>Overleaf (LaTeX collaboration)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="topic-card">
+                <h3>Key Journals for Literature Search</h3>
+                <ul>
+                    <li>Sleep Medicine Reviews</li>
+                    <li>Alzheimer's & Dementia</li>
+                    <li>Journal of Alzheimer's Disease</li>
+                    <li>Sleep</li>
+                    <li>Nature and Science of Sleep</li>
+                    <li>Neurobiology of Aging</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Download Section -->
+        <section id="downloads">
+            <h2>Downloadable Resources</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div class="topic-card" style="text-align: center;">
+                    <h3>Search Strategy Template</h3>
+                    <p>Excel template for documenting searches across multiple databases</p>
+                    <button style="background-color: var(--secondary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Download (.xlsx)</button>
+                </div>
+                
+                <div class="topic-card" style="text-align: center;">
+                    <h3>PRISMA Flow Diagram</h3>
+                    <p>Editable PowerPoint template for your flowchart</p>
+                    <button style="background-color: var(--secondary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Download (.pptx)</button>
+                </div>
+                
+                <div class="topic-card" style="text-align: center;">
+                    <h3>Data Extraction Form</h3>
+                    <p>Comprehensive form for study characteristics and outcomes</p>
+                    <button style="background-color: var(--secondary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Download (.docx)</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Frequently Asked Questions -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="topic-card">
+                <h3>How many databases should I search?</h3>
+                <p>At minimum, search PubMed/MEDLINE, Embase, and Cochrane Central. Consider additional subject-specific databases like PsycINFO or CINAHL depending on your topic.</p>
+            </div>
+            
+            <div class="topic-card">
+                <h3>How do I handle non-English studies?</h3>
+                <p>Include non-English studies if you have translation capabilities, or state language restrictions in your methods. Document how many non-English studies were excluded during screening.</p>
+            </div>
+            
+            <div class="topic-card">
+                <h3>What's the best way to document my search process?</h3>
+                <p>Keep detailed records of:
+                <ul>
+                    <li>Search dates and database versions</li>
+                    <li>Complete search strategies for each database</li>
+                    <li>Number of results from each source</li>
+                    <li>Screening decisions at each phase</li>
+                </ul>
+                </p>
+            </div>
         </section>
     </div>
     
     <footer>
         <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left;">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#topic1" style="color: white;">Topic 1</a></li>
+                        <li><a href="#topic5" style="color: white;">Topic 5</a></li>
+                        <li><a href="#additional-resources" style="color: white;">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>References</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="https://www.prisma-statement.org/" style="color: white;" target="_blank">PRISMA</a></li>
+                        <li><a href="https://www.cochranelibrary.com/" style="color: white;" target="_blank">Cochrane</a></li>
+                        <li><a href="https://www.nih.gov/" style="color: white;" target="_blank">NIH Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p style="margin: 0.5rem 0;">researchelp@example.com</p>
+                    <p>Academic Research Center</p>
+                </div>
+            </div>
+            <hr style="margin: 1.5rem 0; border-color: rgba(255,255,255,0.1);">
             <p>© 2023 Systematic Review Resources | Sleep-Wake Disorders and Alzheimer's Disease</p>
             <p>For academic use only. Consult with a research librarian for customized search strategies.</p>
         </div>
     </footer>
+
+    <script>
+        // Simple JavaScript for interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event to all buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('Download link would be active in a live implementation');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
